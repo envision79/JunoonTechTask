@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My awesome portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*css reset*/
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      /*navigation bar*/
+      #navbar {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 0px;
+        left: 0px;
+      }
+      #logo {
+        margin: 10px 34px;
+      }
+      #logo img {
+        height: 60px;
+        margin: 3px 6px;
+        border-radius: 4px;
+      }
+      #navbar ul {
+        display: flex;
+        font-family: "baloo Bhai 2";
+      }
+      #navbar::before {
+        content: "";
+        position: absolute;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.6;
+        top: 0px;
+        left: 0px;
+      }
+      #navbar ul li {
+        list-style: none;
+        font-size: 1rem;
+      }
+      #navbar ul li a {
+        color: white;
+        display: block;
+        padding: 3px 22px;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+      #navbar ul li a:hover {
+        color: black;
+        background-color: white;
+      }
+
+      /*home section*/
+      #home {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        justify-content: center;
+        align-items: center;
+        height: 391px;
+      }
+      #home::before {
+        content: "";
+        position: absolute;
+        background-image: url("archi.jpg");
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.9;
+      }
+      #home h1 {
+        color: white;
+        text-align: center;
+        font-family: "Bree Serif";
+      }
+      #home p {
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: "Bree Serif";
+      }
+      /*services section*/
+      #services {
+        display: flex;
+        margin: 30px;
+      }
+      #services .box {
+        border: 2px solid brown;
+        border-radius: 20px;
+        padding: 34px;
+        margin: 3px 6px;
+        background-color: #f2f2f2;
+      }
+      #services .box img {
+        height: 120px;
+        margin: auto;
+        display: block;
+      }
+      #services .box p {
+        font-family: "baloo Bhai 2";
+      }
+      /* Clients Section */
+      #client-section {
+        position: relative;
+      }
+
+      #client-section::before {
+        content: "";
+        position: absolute;
+        background: url("bg16.jpg") no-repeat center center/cover;
+        width: 100%;
+        height: 100%;
+        background-size: 1270px;
+        z-index: -1;
+        opacity: 0.8;
+      }
+
+      #clients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .client-item {
+        padding: 34px;
+      }
+
+      #clients img {
+        height: 124px;
+      }
+
+      /*utility classes*/
+      .h-primary {
+        font-size: 3rem;
+        padding: 110px 5px 5px;
+        font-family: "baloo Bhai 2";
+      }
+      .h-secondary {
+        font-size: 1.7rem;
+        padding: 12px;
+        font-family: "baloo Bhai 2";
+      }
+      .btn {
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: brown;
+        color: white;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: black;
+      }
+      .btn2 {
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: brown;
+        color: white;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .btn2 a {
+        color: white;
+        text-decoration: none;
+      }
+      .btn2:hover {
+        background-color: black;
+      }
+      .center {
+        text-align: center;
+      }
+
+      /* Contact Section */
+      #contact {
+        position: relative;
+      }
+      #contact::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        background: url("cont.jpg") no-repeat center center/cover;
+      }
+      #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+      }
+      #contact-box input,
+      #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+      }
+
+      #contact-box form {
+        width: 40%;
+      }
+
+      #contact-box label {
+        font-size: 1.3rem;
+        font-family: "Bree Serif", serif;
+      }
+
+      footer {
+        background: black;
+        color: white;
+        padding: 9px 20px;
+      }
+
+      /*ABOUT ME*/
+      .about {
+        padding: 50px;
+        text-align: center;
+        background-image: url("simple-background-backgrounds-passion-simple-1-5c9b95d09002a.png");
+        height: 500px;
+        background-size: 1270px;
+        font-family: "baloo bhai 2";
+        font-size: 20px;
+      }
+      .about h1 {
+        font-size: 40px;
+      }
+      section .about {
+        text-align: center;
+        padding-top: 40px;
+      }
+      .about img {
+        height: 200px;
+      }
+      .about h4 {
+        margin: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="logo">
+        <img src="lo.png" alt="portfolio" />
+      </div>
+      <ul>
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#Experience">My Experience</a></li>
+        <li class="item"><a href="#Skills">My skills</a></li>
+        <li class="item"><a href="#About">About me</a></li>
+        <li class="item"><a href="#Contact">Contact me</a></li>
+      </ul>
+    </nav>
+    <section id="home">
+      <h1 class="h-primary">Hey there!</h1>
+      <p>This is Adarsh Kumar, a computer science undergrad at NSUT, Delhi.</p>
+
+      <button class="btn">Contact me</button>
+    </section>
+    <section class="services-container">
+      <p><a name="Experience"></a></p>
+      <h1 class="h-primary center">My Experience</h1>
+      <div id="services">
+        <div class="box">
+          <img src="gsoc.png" alt="" />
+          <h3 class="h-secondary center">Google Code-in Mentor</h3>
+          <p class="center">
+            Nov 2019 - Jan 2020 • Mentored students to implement features in
+            Kubernetes, Web & Middleware tech.
+          </p>
+        </div>
+        <div class="box">
+          <img src="micro.png" alt="" />
+          <h3 class="h-secondary center">Intern at Microsoft</h3>
+          <p class="center">
+            Nov 2019 - Jan 2020 • Mentored students to implement features in
+            Kubernetes, Web & Middleware tech.
+          </p>
+        </div>
+        <div class="box">
+          <img src="Amazon logo.png" alt="" />
+          <h3 class="h-secondary center">Intern at Amazon</h3>
+          <p class="center">
+            Nov 2019 - Jan 2020 • Mentored students to implement features in
+            Kubernetes, Web & Middleware tech.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="client-section">
+      <p><a name="Skills"></a></p>
+      <h1 class="h-primary center">My Skills</h1>
+      <div id="clients">
+        <div class="client-item">
+          <img src="cpp.svg" alt="CPP" />
+        </div>
+        <div class="client-item">
+          <img src="css.png" alt="CSS" />
+        </div>
+
+        <div class="client-item">
+          <img src="html.png" alt="HTML" />
+        </div>
+        <div class="client-item">
+          <img src="py.png" alt="PYTHON" />
+        </div>
+        <div class="client-item">
+          <img src="js1.jfif" alt="JAVASCRIPT" />
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <p><a name="About"></a></p>
+      <h1>About me</h1>
+      <img src="lo.png" alt="This is Adarsh Kumar" />
+      <h2>Adarsh &nbsp;Kumar</h2>
+      &nbsp;&nbsp;&nbsp;
+      <button class="btn2">
+        <a
+          href="https://www.instagram.com/adarsh_37/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram</a
+        >
+      </button>
+      <button class="btn2">
+        <a
+          href="https://www.linkedin.com/in/adarsh-kumar-013a511b8/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Linkedin</a
+        >
+      </button>
+      <button class="btn2">
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+          >Github</a
+        >
+      </button>
+      <button class="btn2">
+        <a
+          href="https://www.codechef.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Codechef</a
+        >
+      </button>
+      <h4>
+        I am Adarsh Kumar currently persuing B.Tech. in computer engineering
+        from NSUT Dwarka.
+      </h4>
+      <h4>
+        I have a good understanding of programming languages C and Python. I am
+        currently working
+      </h4>
+      <h4>
+        on Data structures. I am also involved in prayas as a teacher of classes
+        11th-12th.
+      </h4>
+    </section>
+
+    <section id="contact">
+      <p><a name="Contact"></a></p>
+      <h1 class="h-primary center">Contact Me</h1>
+      <div id="contact-box">
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email: </label>
+            <input
+              type="email"
+              name="name"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message: </label>
+            <textarea name="message" id="message" cols="30" rows="7"></textarea>
+          </div>
+          <button class="btn">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="center">Copyright &copy; All rights reserved!</div>
+    </footer>
+  </body>
+</html>
