@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My awesome portfolio</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap"
@@ -16,272 +18,272 @@
       href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
       rel="stylesheet"
     />
-    <style>
-      /*css reset*/
-      * {
-        margin: 0px;
-        padding: 0px;
-      }
-      /*navigation bar*/
-      #navbar {
-        display: flex;
-        align-items: center;
-        position: relative;
-        top: 0px;
-        left: 0px;
-      }
-      #logo {
-        margin: 10px 34px;
-      }
-      #logo img {
-        height: 60px;
-        margin: 3px 6px;
-        border-radius: 4px;
-      }
-      #navbar ul {
-        display: flex;
-        font-family: "baloo Bhai 2";
-      }
-      #navbar::before {
-        content: "";
-        position: absolute;
-        background-color: black;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        opacity: 0.6;
-        top: 0px;
-        left: 0px;
-      }
-      #navbar ul li {
-        list-style: none;
-        font-size: 1rem;
-      }
-      #navbar ul li a {
-        color: white;
-        display: block;
-        padding: 3px 22px;
-        border-radius: 20px;
-        text-decoration: none;
-      }
-      #navbar ul li a:hover {
-        color: black;
-        background-color: white;
-      }
-
-      /*home section*/
-      #home {
-        display: flex;
-        flex-direction: column;
-        padding: 3px 200px;
-        justify-content: center;
-        align-items: center;
-        height: 391px;
-      }
-      #home a {
-        text-decoration: none;
-        color: white;
-      }
-      #home::before {
-        content: "";
-        position: absolute;
-        background-image: url("images/archi.jpg");
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        opacity: 0.9;
-      }
-      #home h1 {
-        color: white;
-        text-align: center;
-        font-family: "Bree Serif";
-      }
-      #home p {
-        color: white;
-        text-align: center;
-        font-size: 1.5rem;
-        font-family: "Bree Serif";
-      }
-      /*services section*/
-      #services {
-        display: flex;
-        margin: 30px;
-      }
-      #services .box {
-        border: 2px solid brown;
-        border-radius: 20px;
-        padding: 34px;
-        margin: 3px 6px;
-        background-color: #f2f2f2;
-      }
-      #services .box img {
-        height: 120px;
-        margin: auto;
-        display: block;
-      }
-      #services .box p {
-        font-family: "baloo Bhai 2";
-      }
-      /* Clients Section */
-      #client-section {
-        position: relative;
-      }
-
-      #client-section::before {
-        content: "";
-        position: absolute;
-        background: url("images/bg16.jpg") no-repeat center center/cover;
-        width: 100%;
-        height: 100%;
-        background-size: 1270px;
-        z-index: -1;
-        opacity: 0.8;
-      }
-
-      #clients {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .client-item {
-        padding: 40px 42px 10px;
-      }
-
-      #clients img {
-        height: 124px;
-      }
-
-      /*utility classes*/
-      .h-primary {
-        font-size: 3rem;
-        padding: 110px 5px 5px;
-        font-family: "baloo Bhai 2";
-      }
-      .h-primary1 {
-        font-size: 3rem;
-        padding: 50px 5px 5px;
-        font-family: "baloo Bhai 2";
-      }
-      .h-secondary {
-        font-size: 1.7rem;
-        padding: 12px;
-        font-family: "baloo Bhai 2";
-      }
-      .btn {
-        padding: 6px 20px;
-        border: 2px solid white;
-        background-color: brown;
-        color: white;
-        margin: 17px;
-        font-size: 1.5rem;
-        border-radius: 10px;
-        cursor: pointer;
-      }
-      .btn:hover {
-        background-color: black;
-      }
-      .btn2 {
-        padding: 6px 20px;
-        border: 2px solid white;
-        background-color: brown;
-        color: white;
-        margin: 17px;
-        font-size: 1.5rem;
-        border-radius: 10px;
-        cursor: pointer;
-      }
-      .btn2 a {
-        color: white;
-        text-decoration: none;
-      }
-      .btn2:hover {
-        background-color: black;
-      }
-      .center {
-        text-align: center;
-      }
-
-      /* Contact Section */
-      #contact {
-        position: relative;
-      }
-      #contact::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        opacity: 0.7;
-        background: url("images/cont.jpg") no-repeat center center/cover;
-      }
-      #contact-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 34px;
-      }
-      #contact-box input,
-      #contact-box textarea {
-        width: 100%;
-        padding: 0.5rem;
-        border-radius: 9px;
-        font-size: 1.1rem;
-      }
-
-      #contact-box form {
-        width: 40%;
-      }
-
-      #contact-box label {
-        font-size: 1.3rem;
-        font-family: "Bree Serif", serif;
-      }
-
-      footer {
-        background: black;
-        color: white;
-        padding: 9px 20px;
-      }
-
-      /*ABOUT ME*/
-      .about {
-        padding: 50px;
-        text-align: center;
-        background-image: url("images/simple-background-backgrounds-passion-simple-1-5c9b95d09002a.png");
-        height: 510px;
-        background-size: 1270px;
-        font-family: "baloo bhai 2";
-        font-size: 20px;
-      }
-      .about h1 {
-        font-size: 40px;
-      }
-      section .about {
-        text-align: center;
-        padding-top: 40px;
-      }
-      .about img {
-        height: 200px;
-      }
-      .about h4 {
-        margin: 12px;
-      }
-      .starsimg img {
-        text-align: center;
-        height: 60px;
-        padding: 20px;
-      }
-      .starsimg {
-        padding: 0px 140px 35px;
-      }
-      .stars {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    </style>
   </head>
+  <style>
+    /*css reset*/
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  /*navigation bar*/
+  #navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  #logo {
+    margin: 10px 34px;
+  }
+  #logo img {
+    height: 60px;
+    margin: 3px 6px;
+    border-radius: 4px;
+  }
+  #navbar ul {
+    display: flex;
+    font-family: "baloo Bhai 2";
+  }
+  #navbar::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+    top: 0px;
+    left: 0px;
+  }
+  #navbar ul li {
+    list-style: none;
+    font-size: 1rem;
+  }
+  #navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  #navbar ul li a:hover {
+    color: black;
+    background-color: white;
+  }
+
+  /*home section*/
+  #home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 391px;
+  }
+  #home a {
+    text-decoration: none;
+    color: white;
+  }
+  #home::before {
+    content: "";
+    position: absolute;
+    background-image: url("images/archi.jpg");
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+  }
+  #home h1 {
+    color: white;
+    text-align: center;
+    font-family: "Bree Serif";
+  }
+  #home p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Bree Serif";
+  }
+  /*services section*/
+  #services {
+    display: flex;
+    margin: 30px;
+  }
+  #services .box {
+    border: 2px solid brown;
+    border-radius: 20px;
+    padding: 34px;
+    margin: 3px 6px;
+    background-color: #f2f2f2;
+  }
+  #services .box img {
+    height: 120px;
+    margin: auto;
+    display: block;
+  }
+  #services .box p {
+    font-family: "baloo Bhai 2";
+  }
+  /* Clients Section */
+  #client-section {
+    position: relative;
+  }
+
+  #client-section::before {
+    content: "";
+    position: absolute;
+    background: url("images/bg16.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    background-size: 1270px;
+    z-index: -1;
+    opacity: 0.8;
+  }
+
+  #clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .client-item {
+    padding: 40px 42px 10px;
+  }
+
+  #clients img {
+    height: 124px;
+  }
+
+  /*utility classes*/
+  .h-primary {
+    font-size: 3rem;
+    padding: 110px 5px 5px;
+    font-family: "baloo Bhai 2";
+  }
+  .h-primary1 {
+    font-size: 3rem;
+    padding: 50px 5px 5px;
+    font-family: "baloo Bhai 2";
+  }
+  .h-secondary {
+    font-size: 1.7rem;
+    padding: 12px;
+    font-family: "baloo Bhai 2";
+  }
+  .btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: black;
+  }
+  .btn2 {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .btn2 a {
+    color: white;
+    text-decoration: none;
+  }
+  .btn2:hover {
+    background-color: black;
+  }
+  .center {
+    text-align: center;
+  }
+
+  /* Contact Section */
+  #contact {
+    position: relative;
+  }
+  #contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url("images/cont.jpg") no-repeat center center/cover;
+  }
+  #contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+  }
+  #contact-box input,
+  #contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+  }
+
+  #contact-box form {
+    width: 40%;
+  }
+
+  #contact-box label {
+    font-size: 1.3rem;
+    font-family: "Bree Serif", serif;
+  }
+
+  footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+  }
+
+  /*ABOUT ME*/
+  .about {
+    padding: 50px;
+    text-align: center;
+    background-image: url("images/simple-background-backgrounds-passion-simple-1-5c9b95d09002a.png");
+    height: 510px;
+    background-size: 1270px;
+    font-family: "baloo bhai 2";
+    font-size: 20px;
+  }
+  .about h1 {
+    font-size: 40px;
+  }
+  section .about {
+    text-align: center;
+    padding-top: 40px;
+  }
+  .about img {
+    height: 200px;
+  }
+  .about h4 {
+    margin: 12px;
+  }
+  .starsimg img {
+    text-align: center;
+    height: 60px;
+    padding: 20px;
+  }
+  .starsimg {
+    padding: 0px 140px 35px;
+  }
+  .stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  </style>
 
   <body>
     <nav id="navbar">
@@ -293,7 +295,7 @@
         <li class="item"><a href="#Experience">My Experience</a></li>
         <li class="item"><a href="#Skills">My skills</a></li>
         <li class="item"><a href="#About">About me</a></li>
-        <li class="item"><a href="#Contact">Contact me</a></li>
+        <li class="item"><a href="#Contact">Comment</a></li>
       </ul>
     </nav>
     <section id="home">
@@ -415,7 +417,7 @@
       </h4>
     </section>
 
-   <section id="contact">
+    <section id="contact">
       <p><a name="Contact"></a></p>
       <h1 class="h-primary1 center">Comment</h1>
       <div id="contact-box">
@@ -450,7 +452,6 @@
         </form>
       </div>
     </section>
-
 
     <footer>
       <div class="center">Copyright &copy; All rights reserved!</div>
